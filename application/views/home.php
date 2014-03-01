@@ -4,6 +4,6 @@
     <title>Home</title>
 </head>
 <body>
-<?= $render ?>
+<?= $list ?>
 </body>
 </html>
