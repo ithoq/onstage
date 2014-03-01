@@ -26,7 +26,8 @@ $config['base_url']	= 'http://onstage/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+// By default apache picks index.php so we leave out of this to avoid getting index.php on base_url()
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

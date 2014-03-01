@@ -4,7 +4,7 @@
  * www.fasani.de
  */
 
-class event extends CI_Model {
+class event_model extends CI_Model {
 
     var $citiArr= array(
       1=>'berlin',
@@ -16,7 +16,8 @@ class event extends CI_Model {
         //Here must autoload cities array (now in var)
     }
     function eventCount($city=1) {
-        $this->db->where('ecity', $city);
+        $lookup= array('ecity' => $city, 'estartdate >='=> date('Y-m-d'));
+        $this->db->where($lookup);
         $this->db->from('event');
 
         return $this->db->count_all_results();

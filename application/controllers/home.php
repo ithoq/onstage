@@ -19,13 +19,14 @@ class Home extends CI_Controller {
 	 */
 	public function index($offset=0) 	{
         $itemsPage=5;
-        $this->load->model('event', '', TRUE);
-        $total_rows=$this->event->eventCount(1);
-        $list=$this->event->getCity(1,$itemsPage,$offset);
+        $this->load->model('event_model', '', TRUE);
+
+        $total_rows=$this->event_model->eventCount(1);
+        $list=$this->event_model->getCity(1,$itemsPage,$offset);
 
 
         $config['table'] = array(
-            'attr'          => array('width' => '500'),
+            'attr'          => array('width' => '600'),
             'total_rows'    =>  $total_rows,
             'query'         =>  $list,
             'per_page'      =>  $itemsPage,

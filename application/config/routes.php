@@ -37,9 +37,11 @@
 | in the URL cannot be matched to a valid route.
 |
 */
+$route['event/(:any)/(:num)'] = "events/lookup/$1/$2";
 
 $route['default_controller'] = "home";
 $route['404_override'] = '';
+
 
 
 /* End of file routes.php */
