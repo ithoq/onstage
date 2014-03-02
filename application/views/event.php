@@ -99,7 +99,10 @@
             <p class="desc">
                 <?=$description?>
 
+                <?php if ($image!='') { ?>
                 <img src="<?=$image ?>">
+                <?php } ?>
+                <br/><?=$source ?>
             </p>
 
         </div><!-- // .eight -->

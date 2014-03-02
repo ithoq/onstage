@@ -19,7 +19,9 @@ class Events extends CI_Controller {
      $template['calstart']  = str_replace('-','',$data->estartdate).'T'.str_replace(':','',$data->estarthour);
      $template['calend']    = str_replace('-','',$data->eenddate).'T'.str_replace(':','',$data->eendhour);
 
-         $template['eticketurl']    = $data->eticketurl;
+
+     $template['eticketurl']    = $data->eticketurl;
+         $template['source']     = ($data->efmurl=='')?'':"<a href=\"{$data->efmurl}\">Event source</a>";
          //Check for event image
          $imagepath= "/public/img/event/{$id}.jpg";
          // echo $_SERVER['DOCUMENT_ROOT'].$imagepath;

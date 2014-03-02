@@ -275,7 +275,7 @@ class Listview {
 
 			# field yang akan ditampilkan
 			$fields = $this->table['fields'];
-			
+			//print_r($fields);
             # field yang disembunyikan
             $hidden_fields = $this->table['hidden_fields'];
 			# action 
@@ -341,7 +341,7 @@ class Listview {
 						}
 					}
 				}
-
+               //print_r( $fields );
 				# sekarang tampilkan data dari resultset ke dalam table row
 				foreach ($fields as $fkey => $fval) {
 					# jika nama filed termasuk yang akan disembunyikan

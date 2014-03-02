@@ -59,7 +59,7 @@ class event_model extends CI_Model {
         $this->db->limit($limit, (int) $offset);
 
         // Define fields
-        $this->db->select( array('id','etitle','estartdate','estarthour') );
+        $this->db->select( array('id','etitle','estartdate','estarthour','soundcloud') );
         $this->db->order_by('estartdate asc, estarthour desc');
 
         $data= $this->db->get_where('event',$lookup  );
@@ -74,9 +74,24 @@ class event_model extends CI_Model {
 
             $link= site_url( array('event', $this->citiArr[$city], $row['id'] ) );
             $row['etitle'] = "<a href=\"{$link}\">{$row['etitle']}</a>";
+            $row['soundcloud']= isset($row['soundcloud']) ? $this->getSoundcloud($row['soundcloud']) :'';
+            $row['estarthour']= isset($row['estarthour']) ? substr($row['estarthour'],0,5):'';
             $rows[] = $row;
         }
         $data->result_array=$rows;
         return $data;
+    }
+
+    private function getSoundcloud($id) {
+    $widgetparams="&color=ff6600&auto_play=false";
+        $player= <<<HTML
+<object height="18" width="100%">
+    <param name="movie" value="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F{$id}&player_type=tiny{$widgetparams}"></param>
+    <param name="allowscriptaccess" value="always"></param>
+    <param name="wmode" value="transparent"></param>
+    <embed wmode="transparent" allowscriptaccess="always" height="18" width="100%" src="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F{$id}&player_type=tiny{$widgetparams}"></embed>
+</object>
+HTML;
+        return $player;
     }
 }
