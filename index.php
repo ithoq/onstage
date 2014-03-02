@@ -1,5 +1,6 @@
 <?php
-
+// All will  be Utf 8, we are in Deutschland :)
+header('Content-Type: text/html; charset=utf-8');
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT

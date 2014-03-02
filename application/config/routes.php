@@ -38,6 +38,10 @@
 |
 */
 $route['event/(:any)/(:num)'] = "events/lookup/$1/$2";
+$route['hamburg'] = "home/hamburg";
+$route['munich']  = "home/munich";
+
+
 
 $route['default_controller'] = "home";
 $route['404_override'] = '';

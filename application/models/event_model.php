@@ -11,11 +11,35 @@ class event_model extends CI_Model {
         2=>'hamburg',
         3=>'munich'
     );
+
     function __construct()    {
         parent::__construct();
         //Here must autoload cities array (now in var)
     }
-    function eventCount($city=1) {
+
+    function lookupCity($city) {
+        if (in_array($city,$this->citiArr) ) {
+            $this->city=array_search($city,$this->citiArr);
+            return $this->city;
+        }
+    }
+
+    function lookupEvent($id) {
+        $lookup= array('ecity' => $this->city, 'id'=>$id);
+        $this->db->where($lookup);
+        $this->db->from('event');
+       $get= $this->db->get();
+
+        if ( $get->num_rows() ) {
+       $data= $get->result();
+        return $data[0];
+        } else {
+            return NULL;
+        }
+    }
+
+
+    function getCityCount($city=1) {
         $lookup= array('ecity' => $city, 'estartdate >='=> date('Y-m-d'));
         $this->db->where($lookup);
         $this->db->from('event');

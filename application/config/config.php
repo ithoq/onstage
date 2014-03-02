@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://onstage/';
+$config['base_url']	    = 'http://onstage/';
 
 /*
 |--------------------------------------------------------------------------
