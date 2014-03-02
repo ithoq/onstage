@@ -8,8 +8,11 @@ class Events extends CI_Controller {
      $data=$this->event_model->lookupEvent($id);
 
      if (isset($data)) {
+     $metadescription           = strip_tags($data->edescription);
      $template['city']          = $city;
      $template['title']         = $data->etitle;
+
+     $template['metadescription']   = substr($metadescription,0,strpos($metadescription, "\n"));
      $template['description']   = $data->edescription;
      $template['location']      = $data->elocation.', '. ucfirst($city);
      $template['startdate']     = $data->estartdate;

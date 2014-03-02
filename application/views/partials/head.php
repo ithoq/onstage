@@ -4,6 +4,8 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
+    <title><?=$title ?></title>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- CSS Files
@@ -31,7 +33,6 @@
     <link rel="apple-touch-icon" sizes="114x114" href="/public/img/apple-touch-icon-114x114.png">
 
     <!-- Google Web Fonts
-
     * This template uses 'PT Serif' and 'Open Sans'
     ================================================== -->
     <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>

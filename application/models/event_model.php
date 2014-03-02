@@ -75,6 +75,7 @@ class event_model extends CI_Model {
             $link= site_url( array('event', $this->citiArr[$city], $row['id'] ) );
             $row['etitle'] = "<a href=\"{$link}\">{$row['etitle']}</a>";
             $row['soundcloud']= isset($row['soundcloud']) ? $this->getSoundcloud($row['soundcloud']) :'';
+            $row['estartdate']= isset($row['estartdate']) ? date('d/m/Y',strtotime($row['estartdate'])):'';
             $row['estarthour']= isset($row['estarthour']) ? substr($row['estarthour'],0,5):'';
             $rows[] = $row;
         }

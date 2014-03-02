@@ -1,5 +1,6 @@
 <?php include "partials/head.php"; ?>
 
+<meta name="description" content="<?=$metadescription ?>">
 <script language="javascript">
     function addtocalendar() {
         redir ='http://www.google.com/calendar/gp';

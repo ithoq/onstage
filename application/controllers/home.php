@@ -36,7 +36,9 @@ class Home extends CI_Controller {
         $template['list']= $this->listview->render();
 
 
-        $template['city'] = "Berlin";
+        $template['city'] = 'Berlin';
+        $template['title']= 'Konzerte in '.$template['city'];
+
 		$this->load->view('home',$template);
 	}
     public function hamburg($offset=0) 	{
@@ -63,6 +65,7 @@ class Home extends CI_Controller {
 
 
         $template['city'] = "Hamburg";
+        $template['title']= 'Konzerte in '.$template['city'];
         $this->load->view('home',$template);
     }
     public function munich($offset=0) 	{
@@ -89,6 +92,7 @@ class Home extends CI_Controller {
 
 
         $template['city'] = "Münich";
+        $template['title']= 'Events in '.$template['city'];
         $this->load->view('home',$template);
     }
 }
