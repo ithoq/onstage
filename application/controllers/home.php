@@ -95,6 +95,10 @@ class Home extends CI_Controller {
         $template['title']= 'Events in '.$template['city'];
         $this->load->view('home',$template);
     }
+
+    public function impressum() {
+        $this->load->view('impressum');
+    }
 }
 
 /* End of file welcome.php */

@@ -20,12 +20,24 @@
     </div>
 </div>
 <div id="section-info" style="margin-left:30px;margin-top: 40px;background: white">
-<?= $list ?>
+    <h2>Impressum</h2>
+    <p>Angaben gemäß § 5 TMG:</p>
+
+    <h3>Kontakt:</h3>
+    Carlos Fasani<br>
+        Oranienstraße 204<br>
+        10999 Berlin<br>
+
+            <br>Telefon:
+            <br>0176 86763646
+        <br><p>E-Mail:</p>
+            <p>martinico at gmail.com</p>
+    <br>Events parsed bei last.fm RSS<br>
+    Last.fm Limited, 5-11 Lavington Street, London, SE1 0NZ</p>
+    <h4>Quellenangaben für die verwendeten Bilder und Grafiken:</h4>
+    Flickr Bilder sind für die kommerzielle Nutzung erlaubt und verlinkt zu den jeweiligen Autoren
 
 
-</div>
-<div id="section-footer">
-    <a href="/home/impressum">Impressum</a>
 </div>
 </body>
 </html>
