@@ -124,7 +124,7 @@
         <div class="eight columns">
             <div class="item">
                 <?php if ($eticketurl!='') { ?>
-                <a href="<?=$eticketurl ?>" class="button">Buy your Ticket</a>
+                <a href="<?=$eticketurl ?>" rel="nofollow" class="button">Buy your Ticket</a>
                 <?php } elseif ($city=='berlin') { ?>
                     <a href="http://www.koka36.de/"><img src="/public/img/koka.jpg"></a>
                 <?php } ?>
