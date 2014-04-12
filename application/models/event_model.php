@@ -17,10 +17,28 @@ class event_model extends CI_Model {
         //Here must autoload cities array (now in var)
     }
 
+    function insert($data) {
+        $this->db->insert('event', $data);
+    }
+
     function lookupCity($city) {
         if (in_array($city,$this->citiArr) ) {
             $this->city=array_search($city,$this->citiArr);
             return $this->city;
+        }
+    }
+
+    // Check if lastfm id is already there
+    function lookupLast($id) {
+        $lookup= array('fmid' => $id);
+        $this->db->where($lookup);
+        $this->db->from('event');
+        $get= $this->db->get();
+
+        if ( $get->num_rows() ) {
+            return true;
+        } else {
+            return false;
         }
     }
 

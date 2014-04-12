@@ -9,7 +9,7 @@ class Import extends CI_Controller {
          3=>'movilmunchen'
      );
 
-     $this->load->model('event_model');
+     $this->load->model('event_model', '', TRUE);
      $cityid = $this->event_model->lookupCity($city);
 
      $feedbase="http://ws.audioscrobbler.com/1.0/user/@lastfmuser/eventsysrecs.rss";
@@ -86,36 +86,30 @@ class Import extends CI_Controller {
              $f['eenddate'] = $enddate[0];
              $f['eendhour'] = substr( $enddate[1],0,-1);
 
-                print_r($f);
-            /*
-            // RECODE INSERT EVENT
-            $res=$connCO->prepare('SELECT fmid FROM event where fmid=:fmid');
-             $res->bindValue('fmid',$f['efmid']);
-             $res->execute();
-             if (! $res->rowCount() ) {
-                 try{
-                     $connCO->insert('event', array('fmid' =>$f['efmid'],
-                         'etitle'        =>$f['etitle'],
-                         'ecity'        =>1,
-                         'edescription'  =>$f['edescription'],
-                         'estartdate'    =>$f['estartdate'],
-                         'estarthour'    =>$f['estarthour'],
-                         'eenddate'      =>$f['eenddate'],
-                         'eendhour'      =>$f['eendhour'],
-                         'efmurl'        =>$f['efmurl'],
-                         'elocation'     =>$f['elocation']
-                     ));
-                 } catch (Exception $e) {
-                     throw new Exception( 'Duplicate index. ', 0, $e);
-                 }
 
-                 $echo.=print_r( $f ,true);
+            //  Insert event in DB
+           if (! $this->event_model->lookupLast($f['efmid'])  ) {
 
-             } else {
-                 $echo.='<br><b>Exists</b>&gt; ';
-                 $echo.=print_r( $f['etitle'] ,true);
-             }
-            */
+                   $data = array('fmid' =>$f['efmid'],
+                       'etitle'        =>$f['etitle'],
+                       'ecity'         =>$cityid,
+                       'edescription'  =>$f['edescription'],
+                       'estartdate'    =>$f['estartdate'],
+                       'estarthour'    =>$f['estarthour'],
+                       'eenddate'      =>$f['eenddate'],
+                       'eendhour'      =>$f['eendhour'],
+                       'efmurl'        =>$f['efmurl'],
+                       'elocation'     =>$f['elocation']
+                   );
+               $this->event_model->insert($data);
+
+               $echo.=print_r( $f ,true);
+
+           } else {
+               $echo.='<br><b>Exists</b>&gt; ';
+               $echo.=print_r( $f['etitle'] ,true);
+           }
+
          }
 
          echo $echo;

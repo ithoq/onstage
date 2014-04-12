@@ -3,9 +3,9 @@ class Events extends CI_Controller {
 
  function lookup($city,$id) 	{
      $this->load->model('event_model', '', TRUE);
-     $cityid= $this->event_model->lookupCity($city);
+     $cityid = $this->event_model->lookupCity($city);
 
-     $data=$this->event_model->lookupEvent($id);
+     $data = $this->event_model->lookupEvent($id);
 
      if (isset($data)) {
      $metadescription           = strip_tags($data->edescription);
@@ -46,5 +46,3 @@ class Events extends CI_Controller {
 
 
 }
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
