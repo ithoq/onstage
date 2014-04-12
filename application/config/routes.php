@@ -38,6 +38,7 @@
 |
 */
 $route['event/(:any)/(:num)'] = "events/lookup/$1/$2";
+$route['import/(:any)']       = "import/last/$1";
 $route['hamburg'] = "home/hamburg";
 $route['munich']  = "home/munich";
 
