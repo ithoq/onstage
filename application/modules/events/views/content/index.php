@@ -22,7 +22,6 @@ $has_records	= isset($records) && is_array($records) && count($records);
 					<th>Event Description</th>
 					<th>Image Credits URL</th>
 					<th>Soundcloud ID</th>
-					<th>Imageback</th>
 					<th>Start Date</th>
 					<th>Start Hour</th>
 					<th>End Date</th>
@@ -65,7 +64,6 @@ $has_records	= isset($records) && is_array($records) && count($records);
 					<td><?php e($record->edescription) ?></td>
 					<td><?php e($record->eimage) ?></td>
 					<td><?php e($record->soundcloud) ?></td>
-					<td><?php e($record->imageback) ?></td>
 					<td><?php e($record->estartdate) ?></td>
 					<td><?php e($record->estarthour) ?></td>
 					<td><?php e($record->eenddate) ?></td>

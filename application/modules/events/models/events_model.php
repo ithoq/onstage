@@ -77,29 +77,24 @@ class Events_model extends BF_Model {
 			"rules"		=> "max_length[11]"
 		),
 		array(
-			"field"		=> "events_imageback",
-			"label"		=> "Imageback",
-			"rules"		=> "max_length[48]"
-		),
-		array(
 			"field"		=> "events_estartdate",
 			"label"		=> "Start Date",
-			"rules"		=> "max_length[1]"
+			"rules"		=> "max_length[10]"
 		),
 		array(
 			"field"		=> "events_estarthour",
 			"label"		=> "Start Hour",
-			"rules"		=> "max_length[1]"
+			"rules"		=> "max_length[8]"
 		),
 		array(
 			"field"		=> "events_eenddate",
 			"label"		=> "End Date",
-			"rules"		=> "max_length[1]"
+			"rules"		=> "max_length[10]"
 		),
 		array(
 			"field"		=> "events_eendhour",
 			"label"		=> "End Hour",
-			"rules"		=> "max_length[1]"
+			"rules"		=> "max_length[8]"
 		),
 		array(
 			"field"		=> "events_efmurl",

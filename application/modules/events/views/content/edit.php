@@ -72,14 +72,6 @@ $id = isset($events['id']) ? $events['id'] : '';
 				</div>
 			</div>
 
-			<div class="control-group <?php echo form_error('imageback') ? 'error' : ''; ?>">
-				<?php echo form_label('Imageback', 'events_imageback', array('class' => 'control-label') ); ?>
-				<div class='controls'>
-					<input id='events_imageback' type='text' name='events_imageback' maxlength="48" value="<?php echo set_value('events_imageback', isset($events['imageback']) ? $events['imageback'] : ''); ?>" />
-					<span class='help-inline'><?php echo form_error('imageback'); ?></span>
-				</div>
-			</div>
-
 			<div class="control-group <?php echo form_error('estartdate') ? 'error' : ''; ?>">
 				<?php echo form_label('Start Date', 'events_estartdate', array('class' => 'control-label') ); ?>
 				<div class='controls'>

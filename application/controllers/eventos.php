@@ -26,7 +26,7 @@ class Eventos extends CI_Controller {
      $template['eticketurl']    = $data->eticketurl;
          $template['source']    = ($data->efmurl=='')?'':"<a href=\"{$data->efmurl}\" rel=\"nofollow\">Event source</a>";
          //Check for event image
-         $imagepath= "/public/img/event/{$id}.jpg";
+         $imagepath= "/img/event/{$id}.jpg";
          // echo $_SERVER['DOCUMENT_ROOT'].$imagepath;
         if ( file_exists($_SERVER['DOCUMENT_ROOT'].$imagepath) ) {
             $template['image']      = $imagepath;
