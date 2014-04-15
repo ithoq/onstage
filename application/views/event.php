@@ -53,7 +53,7 @@
 <div id="section-event" <?=$imagestyle ?> itemscope itemtype="http://data-vocabulary.org/Event">
     <div class="container">
         <div class="sixteen columns">
-            <h1><a href="<?=base_url() ?><?php if ($city!='berlin') echo $city; ?>" title="Home"><img src="/public/img/<?=$city ?>.png" alt="ON STAGE" /></a></h1>
+            <h1><a href="<?=base_url() ?><?php if ($city!='berlin') echo $city; ?>" title="Home"><img src="/img/<?=$city ?>.png" alt="ON STAGE" /></a></h1>
 
         </div><!-- // .sixteen -->
 
@@ -126,7 +126,7 @@
                 <?php if ($eticketurl!='') { ?>
                 <a href="<?=$eticketurl ?>" rel="nofollow" class="button">Buy your Ticket</a>
                 <?php } elseif ($city=='berlin') { ?>
-                    <a href="http://www.koka36.de/"><img src="/public/img/koka.jpg"></a>
+                    <a href="http://www.koka36.de/"><img src="/img/koka.jpg"></a>
                 <?php } ?>
                 </div><!-- // .item -->
         </div><!-- // .eight -->
@@ -219,7 +219,7 @@
 
         <div class="eight columns">
             <ul id="social">
-                <li><a href="http://www.twitter.com/martinfasani" title=""><img src="/public/img/icons/icon_twitter.png" alt="Twitter" /></a></li>
+                <li><a href="http://www.twitter.com/martinfasani" title=""><img src="/img/icons/icon_twitter.png" alt="Twitter" /></a></li>
         <!--        <li><a href="http://www.facebook.com" title=""><img src="/publi/img/icons/icon_facebook.png" alt="Facebook" /></a></li>
 
                 <li><a href="http://www.youtube.com" title=""><img src="../img/icons/icon_youtube.png" alt="Youtube" /></a></li>

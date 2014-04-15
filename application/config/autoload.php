@@ -37,7 +37,10 @@
 |
 */
 
-$autoload['packages'] = array();
+$autoload['packages'] = array(
+		realpath(APPPATH .'../bonfire'),	// Bonfire Core
+		APPPATH.'third_party'				// App -specific 3rd-party libs.
+	);
 
 
 /*
@@ -52,7 +55,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('database','calendar' );
+$autoload['libraries'] = array('database', 'session');
 
 
 /*
@@ -64,7 +67,7 @@ $autoload['libraries'] = array('database','calendar' );
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url');
+$autoload['helper'] = array('url', 'language');
 
 
 /*
@@ -80,7 +83,7 @@ $autoload['helper'] = array('url');
 |
 */
 
-$autoload['config'] = array();
+$autoload['config'] = array('application');
 
 
 /*
@@ -96,7 +99,7 @@ $autoload['config'] = array();
 |
 */
 
-$autoload['language'] = array('calendar','form_validation');
+$autoload['language'] = array();
 
 
 /*

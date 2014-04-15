@@ -1,14 +1,11 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php (defined('BASEPATH')) OR exit('No direct script access allowed');
 
-/**
- * classname:	MY_Loader
- * scope:		Public
- */
+/* load the MX_Loader class */
+require APPPATH."third_party/MX/Loader.php";
 
-class MY_Loader extends CI_Loader {
-
-	private $theme_path = "";
-	private $theme 		= "";
+class MY_Loader extends MX_Loader {
+    private $theme_path = "";
+    private $theme 		= "";
     /**
      * Keep track of which sparks are loaded. This will come in handy for being
      *  speedy about loading files later.
@@ -34,9 +31,9 @@ class MY_Loader extends CI_Loader {
             || is_callable(array('CI_Loader', '_ci_autoloader')));
 
         parent::__construct();
-		
-		$this->set_theme($this->theme);
-	}
+
+        $this->set_theme($this->theme);
+    }
     /**
      * To accomodate CI 2.1.0, we override the initialize() method instead of
      *  the ci_autoloader() method. Once sparks is integrated into CI, we
@@ -243,22 +240,19 @@ class MY_Loader extends CI_Loader {
             }
         }
     }
-	public function set_theme($theme = "") {
-		$path			= "";
-		$this->theme 	= $theme;
+    public function set_theme($theme = "") {
+        $path			= "";
+        $this->theme 	= $theme;
 
-		if ($this->theme) {
-			$this->theme_path 	= "_themes";
-			$path 				= "views/{$this->theme_path}/{$this->theme}/";
+        if ($this->theme) {
+            $this->theme_path 	= "_themes";
+            $path 				= "views/{$this->theme_path}/{$this->theme}/";
 
-			$this->_ci_view_paths = array(APPPATH . $path => TRUE);	
-			$this->_ci_cached_vars = array("theme_path" => $path);
-		}
-		
-		return $this;
-	}		
+            $this->_ci_view_paths = array(APPPATH . $path => TRUE);
+            $this->_ci_cached_vars = array("theme_path" => $path);
+        }
+
+        return $this;
+    }
 
 }
-
-/* End of file MY_Loader.php */
-/* Location: ./application/core/MY_Loader.php */

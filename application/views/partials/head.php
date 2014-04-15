@@ -16,10 +16,10 @@
     * responsive_custom			- CSS override for responsive layout
     ================================================== -->
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.8.0/build/cssreset/cssreset-min.css">
-    <link rel="stylesheet" href="/public/css/alpha_background.css">
-    <link rel="stylesheet" href="/public/css/grid.css">
-    <link rel="stylesheet" href="/public/css/style.css">
-    <link rel="stylesheet" href="/public/css/responsive_custom.css">
+    <link rel="stylesheet" href="/css/alpha_background.css">
+    <link rel="stylesheet" href="/css/grid.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive_custom.css">
 
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,14 +27,14 @@
 
     <!-- Favicons
     ================================================== -->
-    <link rel="shortcut icon" href="/public/img/favicon.ico">
-    <link rel="apple-touch-icon" href="/public/img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/public/img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/public/img/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png">
 
     <!-- Google Web Fonts
     * This template uses 'PT Serif' and 'Open Sans'
     ================================================== -->
     <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
-    <script src="/public/js/jquery/jquery-1.10.2.min.js"></script>
-    <script src="/public/js/jquery/jquery-ui.min.js"></script>
+    <script src="/js/jquery/jquery-1.10.2.min.js"></script>
+    <script src="/js/jquery/jquery-ui.min.js"></script>

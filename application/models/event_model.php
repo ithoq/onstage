@@ -18,7 +18,7 @@ class event_model extends CI_Model {
     }
 
     function insert($data) {
-        $this->db->insert('event', $data);
+        $this->db->insert('bf_events', $data);
     }
 
     function lookupCity($city) {
@@ -32,7 +32,7 @@ class event_model extends CI_Model {
     function lookupLast($id) {
         $lookup= array('fmid' => $id);
         $this->db->where($lookup);
-        $this->db->from('event');
+        $this->db->from('bf_events');
         $get= $this->db->get();
 
         if ( $get->num_rows() ) {
@@ -45,7 +45,7 @@ class event_model extends CI_Model {
     function lookupEvent($id) {
         $lookup= array('ecity' => $this->city, 'id'=>$id);
         $this->db->where($lookup);
-        $this->db->from('event');
+        $this->db->from('bf_events');
        $get= $this->db->get();
 
         if ( $get->num_rows() ) {
@@ -60,7 +60,7 @@ class event_model extends CI_Model {
     function getCityCount($city=1) {
         $lookup= array('ecity' => $city, 'estartdate >='=> date('Y-m-d'));
         $this->db->where($lookup);
-        $this->db->from('event');
+        $this->db->from('bf_events');
 
         return $this->db->count_all_results();
     }
@@ -80,7 +80,7 @@ class event_model extends CI_Model {
         $this->db->select( array('id','etitle','estartdate','estarthour','soundcloud') );
         $this->db->order_by('estartdate asc, estarthour desc');
 
-        $data= $this->db->get_where('event',$lookup  );
+        $data= $this->db->get_where('bf_events',$lookup  );
 
         /* Do some data transformation before returning the rows */
         $rows = array();

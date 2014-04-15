@@ -1,5 +1,11 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/* define the module locations and offset */
+$config['modules_locations'] = array(
+	realpath(APPPATH) . '/modules/' => '../../application/modules/',
+	realpath(APPPATH .'../bonfire/modules') .'/' => '../../bonfire/modules/',
+);
+
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -14,7 +20,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	    = 'http://onstage/';
+$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +32,6 @@ $config['base_url']	    = 'http://onstage/';
 | variable so that it is blank.
 |
 */
-// By default apache picks index.php so we leave out of this to avoid getting index.php on base_url()
 $config['index_page'] = '';
 
 /*
@@ -70,7 +75,7 @@ $config['url_suffix'] = '';
 | than english.
 |
 */
-$config['language']	= 'deutsch';
+$config['language']	= 'english';
 
 /*
 |--------------------------------------------------------------------------
@@ -92,7 +97,7 @@ $config['charset'] = 'UTF-8';
 | setting this variable to TRUE (boolean).  See the user guide for details.
 |
 */
-$config['enable_hooks'] = FALSE;
+$config['enable_hooks'] = false;
 
 
 /*
@@ -181,7 +186,7 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 1;
+$config['log_threshold'] = 0;
 
 /*
 |--------------------------------------------------------------------------
@@ -192,7 +197,7 @@ $config['log_threshold'] = 1;
 | application/logs/ folder. Use a full server path with trailing slash.
 |
 */
-$config['log_path'] = '';
+$config['log_path'] = APPPATH .'logs/';
 
 /*
 |--------------------------------------------------------------------------
@@ -214,7 +219,7 @@ $config['log_date_format'] = 'Y-m-d H:i:s';
 | system/cache/ folder.  Use a full server path with trailing slash.
 |
 */
-$config['cache_path'] = '';
+$config['cache_path'] = APPPATH .'cache/';
 
 /*
 |--------------------------------------------------------------------------
@@ -225,7 +230,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = 'fasani';
+$config['encryption_key'] = "37931e75313697ce01c27a033cef5529";
 
 /*
 |--------------------------------------------------------------------------
@@ -245,12 +250,12 @@ $config['encryption_key'] = 'fasani';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'ci_session';
+$config['sess_cookie_name']		= 'bf_session';
 $config['sess_expiration']		= 7200;
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= FALSE;
 $config['sess_use_database']	= FALSE;
-$config['sess_table_name']		= 'ci_sessions';
+$config['sess_table_name']		= 'sessions';
 $config['sess_match_ip']		= FALSE;
 $config['sess_match_useragent']	= TRUE;
 $config['sess_time_to_update']	= 300;
@@ -263,13 +268,11 @@ $config['sess_time_to_update']	= 300;
 | 'cookie_prefix' = Set a prefix if you need to avoid collisions
 | 'cookie_domain' = Set to .your-domain.com for site-wide cookies
 | 'cookie_path'   =  Typically will be a forward slash
-| 'cookie_secure' =  Cookies will only be set if a secure HTTPS connection exists.
 |
 */
-$config['cookie_prefix']	= "";
-$config['cookie_domain']	= "";
-$config['cookie_path']		= "/";
-$config['cookie_secure']	= FALSE;
+$config['cookie_prefix']	= '';
+$config['cookie_domain']	= '';
+$config['cookie_path']		= '/';
 
 /*
 |--------------------------------------------------------------------------
@@ -294,9 +297,9 @@ $config['global_xss_filtering'] = FALSE;
 | 'csrf_cookie_name' = The cookie name
 | 'csrf_expire' = The number in seconds the token should expire.
 */
-$config['csrf_protection'] = FALSE;
-$config['csrf_token_name'] = 'csrf_test_name';
-$config['csrf_cookie_name'] = 'csrf_cookie_name';
+$config['csrf_protection'] = TRUE;
+$config['csrf_token_name'] = 'ci_csrf_token';
+$config['csrf_cookie_name'] = 'ci_csrf_token';
 $config['csrf_expire'] = 7200;
 
 /*
@@ -329,7 +332,7 @@ $config['compress_output'] = FALSE;
 | regarding date handling.
 |
 */
-$config['time_reference'] = 'local';
+$config['time_reference'] = 'gmt';
 
 
 /*

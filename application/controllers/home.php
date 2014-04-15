@@ -4,16 +4,16 @@ class Home extends CI_Controller {
     var $itemsPage= 10;
     var $tablewidth= "96%";
     var $fields= array(    'id' => 'Id',
-    'etitle' => 'Event:',
-    'estartdate' => 'Am',
-    'estarthour' => 'Um',
-    'soundcloud' => 'Soundcloud');
+        'etitle' => 'Event:',
+        'estartdate' => 'Am',
+        'estarthour' => 'Um',
+        'soundcloud' => 'Soundcloud');
 
     function __construct()    {
         parent::__construct();
     }
 
-	public function index($offset=0) 	{
+    public function index($offset=0) 	{
         $itemsPage=$this->itemsPage;
         $this->load->model('event_model', '', TRUE);
 
@@ -39,8 +39,8 @@ class Home extends CI_Controller {
         $template['city'] = 'Berlin';
         $template['title']= 'Konzerte in '.$template['city'];
 
-		$this->load->view('home',$template);
-	}
+        $this->load->view('home',$template);
+    }
     public function hamburg($offset=0) 	{
         $itemsPage=$this->itemsPage;
         $this->load->model('event_model', '', TRUE);
@@ -100,6 +100,3 @@ class Home extends CI_Controller {
         $this->load->view('impressum');
     }
 }
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

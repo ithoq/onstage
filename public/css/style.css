@@ -114,7 +114,7 @@ img { max-width: 100%; }
         bg_alpha50.png file is used for transparent background
         Look in the documentation file for usages of transparent png overlays
     *	*	*	*	*	*	*	*	*	*	*	*/
-    background: url('/public/img/alpha/bg_alpha50.png');
+    background: url('/img/alpha/bg_alpha50.png');
 }
 
 /*	*	*	*	*	*	*	*	*	*	*	*
@@ -176,7 +176,7 @@ img { max-width: 100%; }
 #section-event {
     color: #fff;
     /* The background image used in this template is 1980 by 650 pixels */
-    background: #111 url('/public/img/bg_eventcamp.jpg') no-repeat center 0;
+    background: #111 url('/img/bg_eventcamp.jpg') no-repeat center 0;
 }
 
 /* Site Title/Logo */
@@ -204,7 +204,7 @@ img { max-width: 100%; }
 
 /* Event information */
 #section-info {
-    background: url('/public/img/alpha/bg_alpha30.png');
+    background: url('/img/alpha/bg_alpha30.png');
     padding: 30px 0;
 }
 
@@ -215,17 +215,17 @@ img { max-width: 100%; }
 }
 
 #section-info #box-date {
-    background: url('/public/img/icons/icon_date.png') no-repeat left 5px;
+    background: url('/img/icons/icon_date.png') no-repeat left 5px;
     padding-left: 70px;
 }
 
 #section-info #box-time {
-    background: url('/public/img/icons/icon_time.png') no-repeat left 5px;
+    background: url('/img/icons/icon_time.png') no-repeat left 5px;
     padding-left: 70px;
 }
 
 #section-info #box-location {
-    background: url('/public/img/icons/icon_map.png') no-repeat left 5px;
+    background: url('/img/icons/icon_map.png') no-repeat left 5px;
     padding-left: 70px;
 }
 
@@ -373,7 +373,7 @@ img { max-width: 100%; }
 
 #section-fees {
     color: #fff;
-    background: #111 url('/public/img/bg_gradient.jpg') no-repeat center center;
+    background: #111 url('/img/bg_gradient.jpg') no-repeat center center;
     padding: 50px 0;
 }
 
@@ -609,7 +609,7 @@ a.button:hover {
 /* PDF Download */
 a.link-pdf {
     color: #ddaa44;
-    background: url(/public/img/icons/icon_pdf.png) no-repeat;
+    background: url(/img/icons/icon_pdf.png) no-repeat;
     font: bold 16px/30px 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     display: block;
