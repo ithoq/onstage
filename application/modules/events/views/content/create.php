@@ -51,8 +51,8 @@ $id = isset($events['id']) ? $events['id'] : '';
 			<div class="control-group <?php echo form_error('edescription') ? 'error' : ''; ?>">
 				<?php echo form_label('Event Description', 'events_edescription', array('class' => 'control-label') ); ?>
 				<div class='controls'>
-					<input id='events_edescription' type='text' name='events_edescription'  value="<?php echo set_value('events_edescription', isset($events['edescription']) ? $events['edescription'] : ''); ?>" />
-					<span class='help-inline'><?php echo form_error('edescription'); ?></span>
+                    <textarea id='events_edescription' style="width:80%" rows="14" type='text' name='events_edescription'><?php echo set_value('events_edescription', isset($events['edescription']) ? $events['edescription'] : ''); ?></textarea>
+                    <span class='help-inline'><?php echo form_error('edescription'); ?></span>
 				</div>
 			</div>
 

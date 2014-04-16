@@ -24,7 +24,7 @@ class MY_Loader extends MX_Loader {
     public function __construct() {
         if(!defined('SPARKPATH'))
         {
-            define('SPARKPATH', 'sparks/');
+            define('SPARKPATH', '../sparks/');
         }
 
         $this->_is_lt_210 = (is_callable(array('CI_Loader', 'ci_autoloader'))
