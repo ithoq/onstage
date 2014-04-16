@@ -1,5 +1,6 @@
 <?php include "partials/head.php"; ?>
 <title>Konzerte und Events <?=$city ?> </title>
+<meta name="google-site-verification" content="EIORFejEODhxxGlm1VdtJN3e-HRvTWbDMreJAjjlzy4" />
 </head>
 <body>
 <div id="section-topbar">

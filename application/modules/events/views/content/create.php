@@ -75,7 +75,7 @@ $id = isset($events['id']) ? $events['id'] : '';
 			<div class="control-group <?php echo form_error('estartdate') ? 'error' : ''; ?>">
 				<?php echo form_label('Start Date', 'events_estartdate', array('class' => 'control-label') ); ?>
 				<div class='controls'>
-					<input id='events_estartdate' type='text' name='events_estartdate' maxlength="1" value="<?php echo set_value('events_estartdate', isset($events['estartdate']) ? $events['estartdate'] : ''); ?>" />
+					<input id='events_estartdate' type='text' name='events_estartdate' maxlength="10" value="<?php echo set_value('events_estartdate', isset($events['estartdate']) ? $events['estartdate'] : ''); ?>" />
 					<span class='help-inline'><?php echo form_error('estartdate'); ?></span>
 				</div>
 			</div>
@@ -83,7 +83,7 @@ $id = isset($events['id']) ? $events['id'] : '';
 			<div class="control-group <?php echo form_error('estarthour') ? 'error' : ''; ?>">
 				<?php echo form_label('Start Hour', 'events_estarthour', array('class' => 'control-label') ); ?>
 				<div class='controls'>
-					<input id='events_estarthour' type='text' name='events_estarthour' maxlength="1" value="<?php echo set_value('events_estarthour', isset($events['estarthour']) ? $events['estarthour'] : ''); ?>" />
+					<input id='events_estarthour' type='text' name='events_estarthour' maxlength="8" value="<?php echo set_value('events_estarthour', isset($events['estarthour']) ? $events['estarthour'] : ''); ?>" />
 					<span class='help-inline'><?php echo form_error('estarthour'); ?></span>
 				</div>
 			</div>
@@ -91,7 +91,7 @@ $id = isset($events['id']) ? $events['id'] : '';
 			<div class="control-group <?php echo form_error('eenddate') ? 'error' : ''; ?>">
 				<?php echo form_label('End Date', 'events_eenddate', array('class' => 'control-label') ); ?>
 				<div class='controls'>
-					<input id='events_eenddate' type='text' name='events_eenddate' maxlength="1" value="<?php echo set_value('events_eenddate', isset($events['eenddate']) ? $events['eenddate'] : ''); ?>" />
+					<input id='events_eenddate' type='text' name='events_eenddate' maxlength="10" value="<?php echo set_value('events_eenddate', isset($events['eenddate']) ? $events['eenddate'] : ''); ?>" />
 					<span class='help-inline'><?php echo form_error('eenddate'); ?></span>
 				</div>
 			</div>
@@ -99,7 +99,7 @@ $id = isset($events['id']) ? $events['id'] : '';
 			<div class="control-group <?php echo form_error('eendhour') ? 'error' : ''; ?>">
 				<?php echo form_label('End Hour', 'events_eendhour', array('class' => 'control-label') ); ?>
 				<div class='controls'>
-					<input id='events_eendhour' type='text' name='events_eendhour' maxlength="1" value="<?php echo set_value('events_eendhour', isset($events['eendhour']) ? $events['eendhour'] : ''); ?>" />
+					<input id='events_eendhour' type='text' name='events_eendhour' maxlength="8" value="<?php echo set_value('events_eendhour', isset($events['eendhour']) ? $events['eendhour'] : ''); ?>" />
 					<span class='help-inline'><?php echo form_error('eendhour'); ?></span>
 				</div>
 			</div>

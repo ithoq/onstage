@@ -6,7 +6,8 @@ class Import extends CI_Controller {
      $userArr= array(
          1=>'movil',
          2=>'movilhamburg',
-         3=>'movilmunchen'
+         3=>'movilmunchen',
+         4=>'movilbremen'
      );
 
      $this->load->model('event_model', '', TRUE);

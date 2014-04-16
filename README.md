@@ -21,28 +21,26 @@ This is an open project. Fell free to fork it, copy, modify it, use it for own c
 Events mysql table
 ==================
 
-
 CREATE TABLE IF NOT EXISTS `bf_events` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `fmid` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `etitle` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `ecity` int(3) NOT NULL,
-  `edescription` mediumtext COLLATE utf8_unicode_ci,
-  `eimage` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `soundcloud` int(11) DEFAULT NULL,
-  `imageback` varchar(48) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `estartdate` date NOT NULL,
-  `estarthour` time NOT NULL,
-  `eenddate` date NOT NULL,
-  `eendhour` time NOT NULL,
-  `efmurl` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `elocation` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `eticketurl` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `deleted` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `fmid` (`fmid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=216 ;
-
+    `fmid` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+      `etitle` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+        `ecity` int(3) NOT NULL,
+	  `edescription` mediumtext COLLATE utf8_unicode_ci,
+	    `eimage` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+	      `soundcloud` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
+	        `imageback` varchar(48) COLLATE utf8_unicode_ci DEFAULT NULL,
+		  `estartdate` date NOT NULL,
+		    `estarthour` time NOT NULL,
+		      `eenddate` date NOT NULL,
+		        `eendhour` time NOT NULL,
+			  `efmurl` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+			    `elocation` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+			      `eticketurl` varchar(200) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+			        `deleted` tinyint(1) NOT NULL DEFAULT '0',
+				  PRIMARY KEY (`id`),
+				    UNIQUE KEY `fmid` (`fmid`)
+				    ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 -- Table `bf_events`
 
