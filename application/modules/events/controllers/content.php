@@ -20,8 +20,10 @@ class content extends Admin_Controller
 
 		$this->auth->restrict('Events.Content.View');
 		$this->load->model('events_model', null, true);
+
+        $this->load->model('city/city_model', null, true);
+
 		$this->lang->load('events');
-		
 			Assets::add_css('flick/jquery-ui-1.8.13.custom.css');
 			Assets::add_js('jquery-ui-1.8.13.min.js');
 		Template::set_block('sub_nav', 'content/_sub_nav');
@@ -63,9 +65,20 @@ class content extends Admin_Controller
 				}
 			}
 		}
+        $city= $this->input->post('city');
+        if (!$city) $city=1;
+        $today = date('Y-m-d');
+		$records = $this->events_model
+            ->where('ecity', $city)
+            ->where('estartdate >=', $today)
+            ->order_by('estartdate','asc')
+            ->limit(100)
+            ->find_all();
 
-		$records = $this->events_model->find_all();
-
+        $cities= $this->city_model->getCities();
+       // Console::log($cities);
+        Template::set('city', $city);
+        Template::set('cities', $cities);
 		Template::set('records', $records);
 		Template::set('toolbar_title', 'Manage events');
 		Template::render();

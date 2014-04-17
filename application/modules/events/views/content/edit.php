@@ -105,7 +105,7 @@ $id = isset($events['id']) ? $events['id'] : '';
 			</div>
 
 			<div class="control-group <?php echo form_error('efmurl') ? 'error' : ''; ?>">
-				<?php echo form_label('Last.fm URL', 'events_efmurl', array('class' => 'control-label') ); ?>
+				<?php echo form_label('Event Source URL', 'events_efmurl', array('class' => 'control-label') ); ?>
 				<div class='controls'>
 					<input id='events_efmurl' type='text' name='events_efmurl' maxlength="200" value="<?php echo set_value('events_efmurl', isset($events['efmurl']) ? $events['efmurl'] : ''); ?>" />
 					<span class='help-inline'><?php echo form_error('efmurl'); ?></span>

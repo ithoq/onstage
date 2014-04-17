@@ -12,7 +12,9 @@ class event_model extends CI_Model {
         3=>'munich',
         4=>'bremen',
         5=>'dusseldorf',
-        6=>'koln'
+        6=>'koln',
+        7=>'dresden',
+        8=>'frankfurt'
     );
 
     function __construct()    {

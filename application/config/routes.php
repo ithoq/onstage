@@ -24,8 +24,9 @@ $route['event/(:any)/(:num)'] = "eventos/lookup/$1/$2";
 $route['import/(:any)']       = "import/last/$1";
 $route['hamburg']   = "home/hamburg";
 $route['munich']    = "home/munich";
-$route['dusseldorf']= "home/dusseldorf";
-$route['koln']= "home/koln";
+$route['dresden']   = "home/dresden";
+$route['koln']      = "home/koln";
+$route['frankfurt'] = "home/frankfurt";
 // Reserved Routes
 $route['default_controller'] = "home";
 $route['404_override'] = '';

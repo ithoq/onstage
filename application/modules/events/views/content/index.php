@@ -5,10 +5,13 @@ $can_delete	= $this->auth->has_permission('Events.Content.Delete');
 $can_edit		= $this->auth->has_permission('Events.Content.Edit');
 $has_records	= isset($records) && is_array($records) && count($records);
 
+$sel_cities= form_dropdown('city', $cities, $city, '','Onchange="myform.submit()"');
 ?>
 <div class="admin-box">
 	<h3>events</h3>
-	<?php echo form_open($this->uri->uri_string()); ?>
+
+	<?php echo form_open($this->uri->uri_string(), array( 'id' => 'myform') ); ?>
+    <?= $sel_cities ?>
 		<table class="table table-striped">
 			<thead>
 				<tr>

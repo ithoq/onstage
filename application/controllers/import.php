@@ -9,7 +9,9 @@ class Import extends CI_Controller {
          3=>'movilmunchen',
          4=>'movilbremen',
          5=>'movildusseldorf',
-         6=>'movilkoln'
+         6=>'movilkoln',
+         7=>'movildresden',
+         8=>'movilfrankfurt'
      );
 
      $this->load->model('event_model', '', TRUE);

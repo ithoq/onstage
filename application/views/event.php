@@ -33,7 +33,7 @@
                         <li class="menu-item"><a href="<?=base_url() ?>hamburg/">Hamburg</a></li>
                         <li class="menu-item"><a href="<?=base_url() ?>munich/">München</a></li>
                         <li class="menu-item"><a href="<?=base_url() ?>koln/">Köln</a></li>
-
+                        <li class="menu-item"><a href="<?=base_url() ?>dresden/">Dresden</a></li>
                     </ul><!-- // uL#nav -->
                 </div><!-- // .dropdown -->
 
