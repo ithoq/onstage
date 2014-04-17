@@ -7,10 +7,12 @@
 class event_model extends CI_Model {
 
     var $citiArr= array(
-      1=>'berlin',
+        1=>'berlin',
         2=>'hamburg',
         3=>'munich',
-        4=>'bremen'
+        4=>'bremen',
+        5=>'dusseldorf',
+        6=>'koln'
     );
 
     function __construct()    {

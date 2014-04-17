@@ -19,29 +19,14 @@
 |
 |	http://codeigniter.com/user_guide/general/routing.html
 |
-| -------------------------------------------------------------------------
-| RESERVED ROUTES
-| -------------------------------------------------------------------------
-|
-| There area two reserved routes:
-|
-|	$route['default_controller'] = 'welcome';
-|
-| This route indicates which controller class should be loaded if the
-| URI contains no data. In the above example, the "welcome" class
-| would be loaded.
-|
-|	$route['404_override'] = 'errors/page_missing';
-|
-| This route will tell the Router what URI segments to use if those provided
-| in the URL cannot be matched to a valid route.
-|
 */
 $route['event/(:any)/(:num)'] = "eventos/lookup/$1/$2";
 $route['import/(:any)']       = "import/last/$1";
-$route['hamburg'] = "home/hamburg";
-$route['munich']  = "home/munich";
-
+$route['hamburg']   = "home/hamburg";
+$route['munich']    = "home/munich";
+$route['dusseldorf']= "home/dusseldorf";
+$route['koln']= "home/koln";
+// Reserved Routes
 $route['default_controller'] = "home";
 $route['404_override'] = '';
 

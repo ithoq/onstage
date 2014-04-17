@@ -32,6 +32,7 @@
                         <li class="menu-item"><a href="#section-fees">Tickets</a></li>
                         <li class="menu-item"><a href="<?=base_url() ?>hamburg/">Hamburg</a></li>
                         <li class="menu-item"><a href="<?=base_url() ?>munich/">München</a></li>
+                        <li class="menu-item"><a href="<?=base_url() ?>koln/">Köln</a></li>
 
                     </ul><!-- // uL#nav -->
                 </div><!-- // .dropdown -->
@@ -69,22 +70,22 @@
 
             <div class="four columns">
                 <div id="box-date">
-                    <h3>Date</h3>
-                    <p><time itemprop="startDate" datetime="<?=$calstart ?>"><?=$startdate?> at <?=$starthour?></time></p>
+                    <h3>Wenn</h3>
+                    <p><time itemprop="startDate" datetime="<?=$calstart ?>"><?=$startdate?></time></p>
                 </div><!-- // #box-date -->
             </div><!-- // .four -->
 
             <div class="four columns">
                 <div id="box-time">
-                    <h3>Time</h3>
+                    <h3>Um</h3>
                     <p><?=$starthour?> ~ <?=$endhour?></p>
                 </div><!-- // #box-time -->
             </div><!-- // .four -->
 
             <div class="four columns">
-                <div id="box-location">
-                    <h3>Location</h3>
-                    <p><?=$location ?></p>
+                <div id="box-location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+                    <h3>Ort</h3>
+                    <p itemprop="name"><?=$location ?></p>
                 </div><!-- // #box-location -->
             </div><!-- // .four -->
 
@@ -96,7 +97,7 @@
 <div id="section-about">
     <div class="container">
         <div class="seven columns">
-            <h2><?=$title?></h2>
+           <span itemscope itemtype="http://schema.org/Event"><h2 itemprop="name"><?=$title?></h2></span>
             <p class="desc">
                 <?=$description?>
 

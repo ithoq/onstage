@@ -15,7 +15,7 @@ class Eventos extends CI_Controller {
      $template['metadescription']   = substr($metadescription,0,strpos($metadescription, "\n"));
      $template['description']   = $data->edescription;
      $template['location']      = $data->elocation.', '. ucfirst($city);
-     $template['startdate']     = $data->estartdate;
+     $template['startdate']     = $this->datetohuman($data->estartdate);
      $template['starthour']     = substr($data->estarthour,0,5);
      $template['endhour']       = substr($data->eendhour,0,5);
     // Build calendar timestamps to add event in google calendar->from db was like  '%Y%m%d T %H%i%s
@@ -43,6 +43,13 @@ class Eventos extends CI_Controller {
 
      }
 }
-
+ private function datetohuman($mysqldate) {
+     if ($mysqldate!='') {
+     $mypart= explode('-',$mysqldate);
+         return $mypart[2].'/'.$mypart[1].'/'.$mypart[0];
+     } else {
+         return '';
+     }
+ }
 
 }
